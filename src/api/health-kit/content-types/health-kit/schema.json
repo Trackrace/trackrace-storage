@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "health_kits",
+  "info": {
+    "singularName": "health-kit",
+    "pluralName": "health-kits",
+    "displayName": "HealthKit"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heart_rate": {
+      "type": "float"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "race": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::race.race",
+      "inversedBy": "health_kits"
+    }
+  }
+}

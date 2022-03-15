@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gpses",
+  "info": {
+    "singularName": "gps",
+    "pluralName": "gpses",
+    "displayName": "GPS",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "altitude": {
+      "type": "float"
+    },
+    "horizontal_accuracy": {
+      "type": "float"
+    },
+    "vertical_accuracy": {
+      "type": "float"
+    },
+    "speed": {
+      "type": "float"
+    },
+    "speed_accuracy": {
+      "type": "float"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "race": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::race.race",
+      "inversedBy": "gpses"
+    },
+    "course": {
+      "type": "decimal"
+    },
+    "course_accuracy": {
+      "type": "decimal"
+    }
+  }
+}

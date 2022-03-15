@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gyroscopes",
+  "info": {
+    "singularName": "gyroscope",
+    "pluralName": "gyroscopes",
+    "displayName": "Gyroscope"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "x": {
+      "type": "float"
+    },
+    "y": {
+      "type": "float"
+    },
+    "z": {
+      "type": "float"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "race": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::race.race",
+      "inversedBy": "gyroscopes"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "races",
+  "info": {
+    "singularName": "race",
+    "pluralName": "races",
+    "displayName": "Race",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accelerometers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::accelerometer.accelerometer",
+      "mappedBy": "race"
+    },
+    "gpses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gps.gps",
+      "mappedBy": "race"
+    },
+    "gyroscopes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gyroscope.gyroscope",
+      "mappedBy": "race"
+    },
+    "health_kits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::health-kit.health-kit",
+      "mappedBy": "race"
+    },
+    "obd_2s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::obd-2.obd-2",
+      "mappedBy": "race"
+    },
+    "started": {
+      "type": "datetime"
+    },
+    "ended": {
+      "type": "datetime"
+    },
+    "number": {
+      "type": "biginteger",
+      "unique": false
+    }
+  }
+}

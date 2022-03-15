@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "obd_2s",
+  "info": {
+    "singularName": "obd-2",
+    "pluralName": "obd-2s",
+    "displayName": "OBD2"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "engine_load": {
+      "type": "float"
+    },
+    "engine_speed": {
+      "type": "float"
+    },
+    "vehicle_speed": {
+      "type": "float"
+    },
+    "intake_air_temperature": {
+      "type": "float"
+    },
+    "throttle_position": {
+      "type": "float"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "race": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::race.race",
+      "inversedBy": "obd_2s"
+    }
+  }
+}
